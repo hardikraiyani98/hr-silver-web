@@ -86,8 +86,8 @@ section {
 }
 
 .home-img img {
-    width: 35vw;
-    animation: floatImage 4s ease-in-out infinite;
+    width: 27vw;
+    animation: floatImage 3s ease-in-out infinite;
 }
 
 @keyframes floatImage {
