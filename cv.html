@@ -1,167 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Hardik Raiyani - Resume</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      margin: 0;
-      justify-content: center;
-      align-items: center;
-    }
-    .sidebar {
-      width: 300px;
-      background-color: rgb(233, 232, 232);
-      color: black;
-      padding: 20px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <style>
+      :root {
+        --bgcolor: #beb8ac;
+        --blue: #2fb7fe;
+        --black: #3d3f42;
+        --white: #f4f7ff;
+        --gray: #d8dce4;
+        --lightgray: #8e9095;
+      }
+
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: monospace;
+      }
+      body {
+        background: var(--bgcolor);
+      }
+      .clearfix {
+        clear: both;
+      }
+      .resume-box {
+        width: 800px;
+        height: 1000px;
+        margin: 100px auto;
+        background: var(--white);
+        box-shadow: 5px 21px 20px 20px #3d3f4238;
+      }
+      .left-section {
+        background: black;
+        width: 250px;
+        height: 1000px;
+        float: left;
+      }
+      .profile {
+        overflow: hidden;
+        position: relative;
+      }
+      .blue-box {
+        width: 257px;
+        height: 487px;
+        background: var(--blue);
+        margin-left: -100px;
+        transform: rotateZ(48deg);
+        margin-top: -178px;
+      }
+
+      .profile-img {
+        position: absolute;
+        z-index: 9;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        border: 3px solid var(--gray);
+      }
+      .name {
+        color: var(--gray);
+        text-align: center;
+        margin-top: -34px;
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      .name span {
+        color: var(--blue);
+      }
+      .n-p {
+        width: 180px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 7px;
+        border-bottom: 2px solid gray;
+        border-top: 2px solid gray;
+        color: whitesmoke;
+        margin-top: 11px;
+        text-transform: uppercase;
+      }
+      .info {
+        margin-top: 30px;
+      }
+      .heading {
+        width: 180px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 7px;
+        border-bottom: 2px solid gray;
+        border-top: 2px solid gray;
+        color: whitesmoke;
+        margin-top: 11px;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+
+      .p1 {
+        color: gray;
+        width: 184px;
+        margin: 0 auto;
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 14px;
+        
+      }
+
+      .a{
+        text-decoration: none;
+        font-family: monospace;
+      }
+
+      .p1 span {
+        font-size: 12px;
+      }
+
+      .span1 img {
+        background: white;
+        width: 30px;
+        padding: 3px;
+        border-radius: 30px;
+        float: left;
+        margin-right: 12px;
+      }
+
+      .right-section {
+        padding: 26px 30px;
+        background-color: white;
+        width: 68%;
+        float: left;
+        height: 1000px;
+      }
+      .right-section img {
+        background: black;
+        width: 36px;
+        padding: 7px;
+        border-radius: 17px;
+        float:left;
+        display: inline-block;
+        margin-top: -6px;
+      }
+
+      .p2 {
+        margin: 0 auto;
+        padding: 2px;
+        border-bottom: 1px solid var(--lightgray);
+        border-top: 1px solid var(--lightgray);
+        color: black;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bolder;
+        margin-left: 40px;
+        line-height: 18px;
+      }
+
+      .p3{
+        margin-top: 20px;
+        color: var(--lightgray);
+        text-align: justify;
+        word-spacing: -4px;
+      }
+
+      .left{
+        width: 25%;
+        float: left;
+      }
+      .right{
+        width: 75%;
+        float: left;
+      }
+
+      .lr-box{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .p4{
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .p5{
+        font-size: 12px;
+        color: var(--lightgray);
+      }
+
+      .s-box{
+        width: 50%;
+        float: left;
+        padding: 20px 20px 20px 0px;
+      }
+
+      #progress{
+        background: #333;
+        border-radius: 13px;
+        height: 8px;
+        width: 100%;
+      }
+
+      #progress:after{
+        content: '';
+        display: block;
+        background: var(--blue);
+        width: 80%;
+        height: 100%;
+        border-radius: 9px;
+      }
+      
+      #progress1{
+        background: #333;
+        border-radius: 13px;
+        height: 8px;
+        width: 100%;
+      }
+
+      #progress1:after{
+        content: '';
+        display: block;
+        background: var(--blue);
+        width: 80%;
+        height: 100%;
+        border-radius: 9px;
+      }
+      
+      #progress2{
+        background: #333;
+        border-radius: 13px;
+        height: 8px;
+        width: 100%;
+      }
+
+      #progress2:after{
+        content: '';
+        display: block;
+        background: var(--blue);
+        width: 80%;
+        height: 100%;
+        border-radius: 9px;
+      }
+      
+      #progress3{
+        background: #333;
+        border-radius: 13px;
+        height: 8px;
+        width: 100%;
+      }
+
+      #progress3:after{
+        content: '';
+        display: block;
+        background: var(--blue);
+        width: 60%;
+        height: 100%;
+        border-radius: 9px;
+      }
+
+      .p6{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+      }
+
+      .h-img{
+            margin-top: 40px;
+            width: 35px;
+            margin-right: 44px;
+      }
+
+      .h1-img{
+             margin-top: 30px;
+             width: 35px;
+             margin-right: 44px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-box">
+      <div class="left-section">
+        <div class="profile">
+          <img
+            src="images/new.png"
+            class="profile-img"
+            height="180px"
+            width="180px"
+          />
+          <div class="blue-box"></div>
+        </div>
+        <h2 class="name">Hardik<br /><span>Raiyani</span></h2>
+        <p class="n-p">Web Designer</p>
+        <div class="info">
+          <p class="heading">info</p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/home.svg" width="25px"
+            /></span>
+            Address<span><br />Rajkot, Gujrat (In)</span>
+          </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/call.svg" width="25px"
+            /></span>
+            Phone<span><br />+91 8866570426</span>
+          </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/email.svg" width="25px"
+            /></span>
+            Email<span><br />hardikraiyani410</span>
+          </p>
+          <p class="p1">
+            <span class="span1"><img src="images/www.svg" width="25px" /></span>
+            Website<span><br />hardikraiyani.com</span>
+          </p>
+        </div>
+
+        <div class="info">
+          <p class="heading">Social</p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/linkedin.svg" width="25px"
+            /></span>
+            <a href="https://www.linkedin.com/in/hardik-raiyani-5992a8362" style="text-decoration: none; font-family: monospace; color: grey;">
+             LinkedIn<span><br />hardikraiyani</a></span>
+          </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/facebook.svg" width="25px"
+            /></span>
+           <a href="https://www.facebook.com/hr.h.hr.581" style="text-decoration: none; font-family: monospace; color: grey; ">
+            Facebook<span><br />Hardik Raiyani</a></span>
+        </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/instagram.svg" width="25px"
+            /></span>
+            <a href="https://www.instagram.com/imhardikraiyani/?hl=en" style="text-decoration: none; font-family: monospace; color: grey;">
+            Instagram<span><br />imhardikraiyani</a></span>
+          </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/twitter.svg" width="25px"
+            /></span>
+            <a href="https://x.com/hardik_rai42962" style="text-decoration: none; font-family: monospace; color: grey;">
+            Twitter<span><br />hardik_rai42962</a></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="right=heading">
+          <img src="images/profile.svg" style="background-color: #f4f7ff" />
+          <p class="p2">Profile</p>
+        </div>
+        <p class="" style="font-style: oblique;
+                         margin-top: 20px;
+                         text-align: justify;">
+          I'm a software engineer with a passion for 
+          building web applications that are
+           both functional and aesthetically pleasing.
+        </p>
+
+        <div class="clearfix"></div>
+        <br /><br />
+        <div class="right=heading">
+          <img src="images/profile.svg" style="background-color: #f4f7ff" />
+          <p class="p2">Education</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="lr-box">
+          <div class="left">
+            <p class="p4">2011-2014 </p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">Diploma In Compuuter Engineering</p>
+            <p class="p5">Darshan Institute of Enggineering & Technology</p>
+            <p class="p5">Gujrat Technical University</p>
+            <div class="clearfix"></div>
+        </div>
+          
+          <div class="lr-box">
+          <div class="left">
+            <p class="p4">2010</p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">10th</p>
+            <p class="p5">Gujrat Board</p>
+            <p class="p5">ksjnakd knaskndkkankd kjsnakdn bkasdklk</p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <br><br>
+        <div class="right=heading">
+          <img src="images/profile.svg" style="background-color: #f4f7ff" />
+          <p class="p2">Work Experience</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="lr-box">
+          <div class="left">
+            <p class="p4">2015=2020</p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">Web Designer</p>
+            <p class="p5">Infinity Infoway</p>
+            <p class="p5">ksjnakd knaskndkkankd kjsnakdn bkasdklk</p>
+            <div class="clearfix"></div>
+        </div>
+          
+          <div class="lr-box">
+          <div class="left">
+            <p class="p4">2020=2024</p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">Web Designer</p>
+            <p class="p5">Ullas India</p>
+            <p class="p5">ksjnakd knaskndkkankd kjsnakdn bkasdklk</p>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="lr-box">
+          <div class="left">
+            <p class="p4">2020=2024</p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">Web Designer</p>
+            <p class="p5">Ullas India</p>
+            <p class="p5">ksjnakd knaskndkkankd kjsnakdn bkasdklk</p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <br /><br />
+        <div class="right=heading">
+          <img src="images/profile.svg" style="background-color: #f4f7ff" />
+          <p class="p2">Skill & Epertize</p>
+          </div>
+          <div class="clearfix"></div>
+          <div class="s-box">
+                <p class="p6">HTML</p>
+                <div id="progress"></div>
+                <p class="p6">CSS</p>
+                <div id="progress1"></div>
+          </div>
+          <div class="s-box">
+                <p class="p6">React</p>
+                <div id="progress2"></div>
+                <p class="p6">JavaScript</p>
+                <div id="progress3"></div>
+          </div>
+        <div class="clearfix"></div>
+        <br /><br />
+        <div class="right=heading">
+          <img src="images/profile.svg" style="background-color: #f4f7ff" />
+          <p class="p2">Hobby & internet</p>
+          </div>
+          <div class="clearfix"></div>
+          <br><br>
+          <img src="images/bicycle-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/game-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/book-closed-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/headphone-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/chess-computer-strategy-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/badminton-racket-and-feather-svgrepo-com.svg" class="h-img" style="background-color: white;">
+    </div>
+     <div class="clearfix"></div>
+        <br><br>
+        <div class="right=heading">
+          <img src="images/profile.svg" style="background-color: #f4f7ff" />
+          <p class="p2">Languages</p>
+        </div>
+        <div class="clearfix"></div>
+        <br><br>
+          <img src="images/html5-01-svgrepo-com.svg" class="h1-img" style="background-color: white;">
+          <img src="images/css3-01-svgrepo-com.svg" class="h1-img" style="background-color: white;">
+          <img src="images/nodejs.svg" class="h1-img" style="background-color: white;">
+          <img src="images/tailwind.svg" class="h1-img" style="background-color: white;">
+          <img src="images/nextjs.svg" class="h1-img" style="background-color: white;">
+          <img src="images/react.svg" class="h1-img" style="background-color: white;">
+          <div class="clearfix"></div>
+        <br><br>  
+          
+          <img src="images/mongodb.svg" class="h1-img" style="background-color:white;">
+          <img src="images/express.svg" class="h1-img" style="background-color: white;">
+          <img src="images/aws.svg" class="h1-img" style="background-color: white;">
+          <img src="images/docker.svg" class="h1-img" style="background-color: white;">
+          <img src="images/gsap.svg" class="h1-img" style="background-color: white;">
+          <img src="images/framermotion.svg" class="h1-img" style="background-color: white;">
     
-    .main {
-      width: 450px;
-      padding: 20px;
-      background: #f9f9f9;
-    }
-    .section {
-      margin-bottom: 20px;
-    }
-    ul {
-      padding-left: 20px;
-
-    }
-    .card {
-      
-      background: rgb(233, 232, 232);
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .card-header {
-      background: #2b5d93;
-      color: white;
-      padding: 20px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .profile-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-top: -10px;
-      border: 4px solid white;
-    }
-
-    .card-body {
-      padding: 20px;
-    }
-
-    .details {
-      text-align: left;
-      margin-top: 20px;
-    }
-
-    .details p {
-      margin: 10px 0;
-      display: flex;
-      align-items: center;
-    }
-
-    .details p i {
-      margin-right: 10px;
-      color: #2b5d93;
-    }
-  </style>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-</head>
-<body>
-
-  <div class="sidebar">
-    <div class="card">
-    <div class="card-header">
-      Hardik Raiyani
-    </div>
-    <div class="card-body">
-      <img src="images/new.png" alt="Profile Image" class="profile-img" />
-      <h2 style="text-decoration: underline; text-align: le; ">Personal details</h2>
-      <div class="details">
-        <p><i class="fas fa-user"></i> Hardik Raiyani</p>
-        <p><i class="fas fa-envelope"></i> hardikraiyani410@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +91 8866570426</p>
-        <p><i class="fas fa-map-marker-alt"></i> Rajkot</p>
-        <p><i class="fas fa-flag"></i> Indian</p>
-      
-    <hr>
-
-    <h2 style="text-decoration: underline;">Skills</h2>
-    <ul>
-      <li>JavaScript</li>
-      <li>HTML5 & CSS3</li>
-      <li>RESTful APIs</li>
-      <li>React</li>
-      <li>Node.js</li>
-      <li>MongoDB</li>
-      <li>Framer Motion</li>
-      <li>TailwindCSS</li>
-      <li>PostgreSQL</li>
-      <li>Java</li>
-      <li>Python</li>
-      <li>C , C++</li>
-      <li>GSAP</li>
-      <li>AWS</li>
-    </ul>
-
-     <hr>
-
-    <h2 style="text-decoration: underline;">Languages</h2>
-    <ul>
-      <li>English</li>
-      <li>Hindi</li>
-      <li>Gujarati</li>
-    </ul>
-    </div>
-    </div>
-  </div>
-  </div>
-
-  <div class="main">
-    <div class="section">
-      <h2 style="color: #1f4f7f">Education</h2>
-      <p><strong>Diploma In Computer Engineering</strong><br>
-        Darshan Institute of Engineering & Technology &nbsp;&nbsp;&nbsp; — <em>Jul 2020</em>
-      </p>
-    </div>
-
-    <div class="section">
-      <h2 style="color: #1f4f7f">Employment</h2>
-      <p><strong>Web Developer</strong><br>
-      Ullas India Pvt. Ltd., RAJKOT &nbsp;&nbsp;&nbsp; — <em>Present</em></p>
-      <ul>
-        <li><strong>Software Development:</strong> Designing, coding, and testing software applications.</li>
-        <li><strong>Problem Solving:</strong> Identifying and resolving software defects and issues.</li>
-        <li><strong>Collaboration:</strong> Working with cross-functional teams to define requirements and solutions.</li>
-        <li><strong>Documentation:</strong> Creating and maintaining documentation for software functionality and specifications.</li>
-        <li><strong>Staying Updated:</strong> Keeping abreast of new technologies and industry trends.</li>
-        <li><strong>Code Quality:</strong> Writing clean, efficient, and well-documented code.</li>
-        <li><strong>Performance Optimization:</strong> Ensuring software is scalable, reliable, and performs efficiently.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2 style="color: #1f4f7f">Full Stack Developer Intern</h2>
-      <ul>
-        <li>Built pipeline scheduling and execution platform and corresponding front-end to manage and interact with the platform</li>
-        <li>Developed 10+ cluster projects and utilized public cloud, computing infrastructure services</li>
-        <li>Designed 20+ front-end Web Interface for engineers and testops to control and monitor the onboard system</li>
-        <li>Architected, implemented, and maintained 5 performant and scalable data-processing back-end systems</li>
-        <li>Worked with 8+ teams to build web-based tools to facilitate their development lifecycle</li>
-        <li>Collaborated with 3 SRE teams of 6 to identify issues and increase the stability, performance, and efficiency of private computing services</li>
-      
-      </ul>
-    </div>
-  </div>
-
-</body>
+  </body>
 </html>
