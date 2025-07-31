@@ -14,5 +14,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
             window.location.href = "hrbill.html";
         } else {
             errorMsg.textContent = "Invalid email or password.";
+                alert("Invalid email or password");
         }
         });
