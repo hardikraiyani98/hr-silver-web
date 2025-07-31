@@ -151,11 +151,11 @@ button{
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form id="loginForm">
         <p style="font-size: 28px; color: #dda10a; text-align: center; text-decoration: underline;">Only For Personal Use</p>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <input type="text" placeholder="Email or Phone" id="email">
 
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
@@ -163,10 +163,12 @@ button{
         <button>Log In</button>
         <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <p id="error-msg"></p>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
           <br>
-          <a href="hrbill.html" style="text-decoration: none;"><p>Hii</p></a>
+          
         </div>
     </form>
+  <script src="js/login.js"></script>
 </body>
 </html>
