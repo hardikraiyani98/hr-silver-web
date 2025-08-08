@@ -3,11 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <title>Resume</title>
     <style>
+      .header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding: 2rem 9%;
+          background: #1f242d;;
+          display: flex;
+          align-items: center;
+          z-index: 100;
+      }
+
+      .header.sticky {
+          border-bottom: .1rem solid rgba(0, 0, 0, .2);
+      }
+
+      .logo {
+          font-size: 2.5rem;
+          color:  #fff;;
+          font-weight: 600;
+          text-decoration: none;
+          text-align: center;
+          font-family: 'Times New Roman', Times, serif;
+      }
+
       :root {
-        --bgcolor: #beb8ac;
-        --blue: #2fb7fe;
+        --bgcolor: #1f242d;
+        --blue: #03547f;
         --black: #3d3f42;
         --white: #f4f7ff;
         --gray: #d8dce4;
@@ -34,7 +60,7 @@
         box-shadow: 5px 21px 20px 20px #3d3f4238;
       }
       .left-section {
-        background: black;
+        background: rgb(18, 18, 18);
         width: 250px;
         height: 1000px;
         float: left;
@@ -48,7 +74,7 @@
         height: 487px;
         background: var(--blue);
         margin-left: -100px;
-        transform: rotateZ(48deg);
+        transform: rotateZ(50deg);
         margin-top: -178px;
       }
 
@@ -295,6 +321,13 @@
     </style>
   </head>
   <body>
+      <!-- header design -->
+    <header class="header">
+
+        <a href="index.html" class="logo" style="text-align: center;">HOME</a>
+
+        
+    </header>
     <div class="resume-box">
       <div class="left-section">
         <div class="profile">
@@ -326,7 +359,7 @@
             <span class="span1"
               ><img src="images/email.svg" width="25px"
             /></span>
-            Email<span><br />hardikraiyani410</span>
+            Gmail<span><br />hardikraiyani410</span>
           </p>
           <p class="p1">
             <span class="span1"><img src="images/www.svg" width="25px" /></span>
@@ -504,5 +537,6 @@
           <img src="images/gsap.svg" class="h1-img" style="background-color: white;">
           <img src="images/framermotion.svg" class="h1-img" style="background-color: white;">
     
+          <script src="script.js"></script>
   </body>
 </html>
