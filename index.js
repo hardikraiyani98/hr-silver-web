@@ -15,7 +15,7 @@ let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop - 15;
+        let offset = sec.offsetTop - 0;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
@@ -79,4 +79,5 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
 
