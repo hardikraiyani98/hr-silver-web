@@ -325,23 +325,24 @@
       }
       }
 
-       @media print {
-      body * {
-        visibility: hidden;
-      }
-      #printableArea, #printableArea * {
-        visibility: visible;
-      }
+     @media print {
+        body * {
+          visibility: hidden;
+        }
+        #printableArea, #printableArea * {
+          visibility: visible;
+        }
      }
-      
+
     </style>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
   <body>
       <!-- header design -->
     <header class="header">
 
         <a href="https://hardikraiyani.com/" class="logo" style="text-align: center;">HOME</a>
-        <button onclick="window.print()" style="border: none; background: transparent; color: white;
+        <button onclick="generatePDF()" style="border: none; background: transparent; color: white;
          font-size: 16px; cursor: pointer; border: 2px solid white; border-radius: 30px; padding: 7px 10px;">
         Save PDF</button>
         
@@ -571,7 +572,11 @@
         </ul>
         </div>
   </div>     
-       
-    
+  <script>
+        function generatePDF() {
+        const element = document.getElementById('printableArea'); // Target your specific element by ID
+        html2pdf().from(element).save("HR-CV.pdf");
+    }
+    </script>
   </body>
 </html>
