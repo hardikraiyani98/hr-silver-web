@@ -1,283 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <title>Resume</title>
+    <style>
+      .header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          padding:0;
+          background: #1f242d;;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          z-index: 100;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="
-    Hardik Raiyani, 
-    Hardik, 
-    Raiyani, 
-    hardikraiyani, 
-    hardik raiyani, 
-    hardik raiyani personal website, 
-    hardik raiyani website, 
-    hardik raiyani portfolio, 
-    hardik raiyani blog, 
-    hardik raiyani projects, 
-    hardik raiyani about, 
-    hardik raiyani contact, 
-    hardik raiyani resume, 
-    hardik raiyani skills, 
-    hardik raiyani education, 
-    hardik raiyani experience, 
-    co-founder of Ullas India, 
-    CTO of Ullas India, 
-    Hardik Raiyani Ullas India, 
-    Ullas India, 
-    hardik raiyani projects, 
-    hardik raiyani blog, 
-    hardik raiyani portfolio, 
-    hardik raiyani website, 
-    hardik raiyani personal website, 
-    hardik raiyani contact, 
-    hardik raiyani resume, 
-    hardik raiyani skills, 
-    hardik raiyani education, 
-    hardik raiyani experience">
-  <meta name="author" content="Hardik Raiyani">
-    <title>Hardik Raiyani</title>
+      .header.sticky {
+          border-bottom: .1rem solid rgba(0, 0, 0, .2);
+      }
 
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      .logo {
+          font-size: 2.5rem;
+          color:  #fff;;
+          font-weight: 600;
+          text-decoration: none;
+          text-align: center;
+          font-family: 'Times New Roman', Times, serif;
+      }
 
-    <!-- custom css -->
-    <link rel="stylesheet" href="style.css">
-</head>
+      :root {
+        --bgcolor: #1f242d;
+        --blue: #03547f;
+        --black: #3d3f42;
+        --white: #f4f7ff;
+        --gray: #d8dce4;
+        --lightgray: #8e9095;
+      }
 
-<body>
-	 
-    <!-- header design -->
-    <header class="header">
-        <a href="https://hardikraiyani.com/" class="logo">Hardik Raiyani</a>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: monospace;
+      }
+      body {
+      }
+      .clearfix {
+        clear: both;
+      }
+      .resume-box {
+        width: 800px;
+        height: 1000px;
+        margin: 50px auto;
+        background: var(--white);
+        box-shadow: 11px 11px 10px 10px #1a3e7338;
+      }
+      .left-section {
+        background: rgb(18, 18, 18);
+        width: 250px;
+        height: 1000px;
+        float: left;
+      }
+      .profile {
+        overflow: hidden;
+        position: relative;
+      }
+      .blue-box {
+        width: 257px;
+        height: 487px;
+        background: var(--blue);
+        margin-left: -100px;
+        transform: rotateZ(50deg);
+        margin-top: -178px;
+      }
 
-        <div class='bx bx-menu' id="menu-icon"></div>
+      .profile-img {
+        position: absolute;
+        z-index: 9;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        border: 3px solid var(--gray);
+      }
+      .name {
+        color: var(--gray);
+        text-align: center;
+        margin-top: -34px;
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      .name span {
+        color: var(--blue);
+      }
+      .n-p {
+        width: 180px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 7px;
+        border-bottom: 2px solid gray;
+        border-top: 2px solid gray;
+        color: whitesmoke;
+        margin-top: 11px;
+        text-transform: uppercase;
+      }
+      .info {
+        margin-top: 30px;
+      }
+      .heading {
+        width: 180px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 7px;
+        border-bottom: 2px solid gray;
+        border-top: 2px solid gray;
+        color: whitesmoke;
+        margin-top: 11px;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-	    <a href="cv.html">CV</a>
-            <a href="login.html"><i class="fas fa-user"></i> &nbsp;&nbsp;Login</a>
-        </nav>
-    </header>
-
-    <!-- home section design -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Hardik Raiyani</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>I'm a software engineer with a passion for building web applications that are both functional and aesthetically pleasing.</p>
-            <br>
-            
-            <div class="social-media">
-                <a href="https://www.facebook.com/hr.h.hr.581"><i class='bx bxl-facebook'></i></a>
-                <a href="https://twitter.com/hardikraiyanii"><i class='bx bxl-twitter'></i></a>
-                <a href="https://github.com/hardikraiyani98"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/imhardikraiyani/?hl=en"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.linkedin.com/in/hardik-raiyani-5992a8362"><i class='bx bxl-linkedin'></i></a>
-            </div>
-            <a href="tel:+919624456199" class="btn"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;Call</a>
-
-            
+      .p1 {
+        color: gray;
+        width: 184px;
+        margin: 0 auto;
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 14px;
         
-        </div>
+      }
 
-        <div class="home-img">
-            <img src="images/new.png" alt="">
-        </div>
+      .a{
+        text-decoration: none;
+        font-family: monospace;
+      }
+
+      .p1 span {
+        font-size: 12px;
+      }
+
+      .span1 img {
+        background: white;
+        width: 30px;
+        padding: 3px;
+        border-radius: 30px;
+        float: left;
+        margin-right: 12px;
+      }
+
+      .right-section {
+        padding: 30px 30px;
+        background-color: white;
+        width: 68%;
+        float: left;
+        height: 1000px;
+      }
+      .right-section img {
+        background: black;
+        width: 36px;
+        padding: 7px;
+        border-radius: 17px;
+        float:left;
+        display: inline-block;
+        margin-top: -6px;
+      }
+
+      .p2 {
+        
+        padding: 2px;
+        border-bottom: 1px solid var(--lightgray);
+        border-top: 1px solid var(--lightgray);
+        color: black;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bolder;
+        margin-left: 40px;
+        line-height: 10px;
+      }
+
+      .p3{
+        margin-top: 1px;
+        color: var(--lightgray);
+        text-align: justify;
+        word-spacing: -4px;
+      }
+
+      .left{
+        width: 25%;
+        float: left;
+      }
+      .right{
+        width: 75%;
+        float: left;
+      }
+
+      .lr-box{
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+
+      .p4{
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--blue);
+      }
+
+      .p5{
+        font-size: 12px;
+      }
+
+      .s-box{
+        width: 50%;
+        float: left;
+        padding: 20px 20px 20px 0px;
+      }
+
+      #progress{
+        background: #333;
+        border-radius: 13px;
+        height: 8px;
+        width: 100%;
+      }
+
+      #progress:after{
+        content: '';
+        display: block;
+        background: var(--blue);
+        width: 80%;
+        height: 100%;
+        border-radius: 9px;
+      }
       
-    </section>
-      <marquee direction="left">
-                <div style="display: flex; align-items: center; gap: 25px; font-size: 25px;">
-					   
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/react.svg" height="24" width="24"><p style="font-size: 25px;">React</p></div>
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/tailwind.svg" height="24" width="24"><p style="font-size: 25px;">Tailwind CSS</p></div>
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/nodejs.svg" height="24" width="24"><p style="font-size: 25px;">Node.js</p></div>
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/nextjs.svg" height="24" width="24"><p style="font-size: 25px;">Next.js</p></div>
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/postgresql.svg" height="24" width="24"><p style="font-size: 25px;">PostgreSQL </p></div>
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/mongodb.svg" height="24" width="24"><p style="font-size: 25px;">MongoDB </p></div>
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/express.svg" height="24" width="24"><p style="font-size: 25px;">Express</p></div>                    
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/AWS.jpg" height="24" width="24"><p style="font-size: 25px;">AWS </p></div>                    
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/docker.svg" height="24" width="24"><p style="font-size: 25px;">Docker </p></div>
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/gsap.svg" height="24" width="24"><p style="font-size: 25px;">GSAP </p></div>
-                    <div style="display: flex; align-items: center; gap: 10px;"><img src="images/framermotion.svg" height="24" width="24"><p style="font-size: 25px;">Framer Motion</p></div>
-                    
-                 </div>
-            </marquee>
+      #progress1{
+        background: #333;
+        border-radius: 13px;
+        height: 8px;
+        width: 100%;
+      }
 
-    <!-- about section design -->
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="images/profile2.png" alt="">
-        </div>
+      #progress1:after{
+        content: '';
+        display: block;
+        background: var(--blue);
+        width: 80%;
+        height: 100%;
+        border-radius: 9px;
+      }
+      
+      #progress2{
+        background: #333;
+        border-radius: 13px;
+        height: 8px;
+        width: 100%;
+      }
 
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Frontend Developer!</h3>
-            <p>Creating the user interface (UI) and user experience (UX) using technologies like HTML, CSS, and JavaScript,
-		    potentially including UI frameworks like React or Vue. </p>
-            <a href="#" class="btn">Read More</a>
-        </div>
-    </section>
+      #progress2:after{
+        content: '';
+        display: block;
+        background: var(--blue);
+        width: 80%;
+        height: 100%;
+        border-radius: 9px;
+      }
+      
+      #progress3{
+        background: #333;
+        border-radius: 13px;
+        height: 8px;
+        width: 100%;
+      }
 
-    <!-- services section design -->
-    <section class="services" id="services">
-        <h2 class="heading">Ser<span>vices</span></h2>
+      #progress3:after{
+        content: '';
+        display: block;
+        background: var(--blue);
+        width: 60%;
+        height: 100%;
+        border-radius: 9px;
+      }
 
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Web Development</h3>
-                <p>Builds and maintains websites. Work with various technologies like HTML, CSS,
-			and JavaScript to create the front-end (what users see) and potentially the back-end (server-side logic and databases) of a website.Also work with tools and frameworks to manage and deploy websites. </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+      .p6{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+      }
 
-            <div class="services-box">
-                <i class='bx bxs-paint'></i>
-                <h3>Graphic Design</h3>
-                <p>Web graphic design is ensuring that the website is easy to navigate and
-			provides a positive user experience. </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
+      .h-img{
+            margin-top: 40px;
+            width: 35px;
+            margin-right: 44px;
+      }
 
-            <div class="services-box">
-                <i class='bx bx-bar-chart-alt'></i>
-                <h3>Digital Marketing</h3>
-                <p>the promotion of products or services using digital channels 
-			and technologies, including the internet and other electronic media.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-    </section>
+      .h1-img{
+             margin-top: 30px;
+             width: 35px;
+             margin-right: 44px;
+      }
+      .flex{
+        display: flex;
+        align-items: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px;
+      }
 
-    <!-- portfolio section design -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
+      @media only screen and (max-width: 600px) {
+      .resume-box {
+        width: 800px;
+        height: 1000px;
+        background: var(--white);
+        box-shadow: 5px 21px 20px 20px #3d3f4238;
+      }
+       .right-section {
+        padding: 5px 30px;
+        background-color: white;
+        width: 68%;
+        float: left;
+        height: 1000px;
+      }
+      }
 
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/portfolio1.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Transformation</h4>
-                    <p>The biggest enemy of digital transformation is digitalisation. It sounds similar, 
-                        but there is a significant difference: transformation means rethinking things.
-                        Digitalisation, on the other hand, only continues old processes in digital form without using
-                        the advantages of digital technologies.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
+    </style>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
+  <body>
+      <!-- header design -->
+    <header class="header">
 
-            <div class="portfolio-box">
-                <img src="images/portfolio2.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Software</h4>
-                    <p>It's like building a house: If the architecture isn't right, even the best implementation will fail. 
-                        The technical objectives, planning, and conception are half the battle. At least.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/portfolio3.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Designs</h4>
-                    <p>Steve Jobs, known for his understatements, once said: "We made the buttons on the screen look so good 
-                        you'll want to lick them." For hygienic reasons, I don't recommend it.But you should definitely
-                         fall in love with a design that not only looks good, but above all, is intelligent and functional..</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="images/portfolio4.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/portfolio5.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/portfolio6.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, ratione.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
-
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
-
-    <!-- footer design -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2025 by Hardik Raiyani | All Rights Reserved.</p>
-        </div>
-
+        <a href="https://hardikraiyani.com/" class="logo" style="text-align: center;">HOME</a>
+        <button onclick="generatePDF()" style="border: none; background: transparent; color: white;
+         font-size: 16px; cursor: pointer; border: 2px solid white; border-radius: 30px; padding: 7px 10px;">
+        Save PDF</button>
         
-    <p onclick="topFunction()" id="myBtns" title="Go to top"><i class="fa-solid fa-square-caret-up"></i></p>
-        
-    </footer>
+    </header>
+    
+    <div class="resume-box" id="printableArea">
+      <div class="left-section">
+        <div class="profile">
+          <img
+            src="images/new.png"
+            class="profile-img"
+            height="180px"
+            width="180px"
+          />
+          <div class="blue-box"></div>
+        </div>
+        <h2 class="name">Hardik<br /><span>Raiyani</span></h2>
+        <p class="n-p">Web Designer</p>
+        <div class="info">
+          <p class="heading">info</p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/home.svg" width="25px"
+            /></span>
+            
+            <a href="https://www.google.com/maps/place/Rajkot,+Gujarat" 
+            style="text-decoration: none; font-family: monospace; color: grey;">
+           <strong> Address</strong><span><br />Rajkot, Gujrat (In)</span></a>
+          </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/call.svg" width="25px"
+            /></span>
+            <a href="tel:+919624456199" 
+            style="text-decoration: none; font-family: monospace; color: grey;">
+          <strong>  Phone</strong><span><br />+91 96244 56199</span></a>
+          </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/email.svg" width="25px"
+            /></span>
+            <a href="mailto:hardikraiyani410@gmail.com" 
+            style="text-decoration: none; font-family: monospace; color: grey;">
+            <strong>Gmail</strong><span><br />hardikraiyani410</span></a>
+          </p>
+          <p class="p1">
+            <span class="span1"><img src="images/www.svg" width="25px" /></span>
+            <a href="https://hardikraiyani.com/" 
+            style="text-decoration: none; font-family: monospace; color: grey;">
+            <strong>Website</strong><span><br />hardikraiyani.com</span></a>
+          </p>
+        </div>
 
+        <div class="info">
+          <p class="heading">Social</p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/linkedin.svg" width="25px"
+            /></span>
+            <a href="https://www.linkedin.com/in/hardik-raiyani-5992a8362" style="text-decoration: none; font-family: monospace; color: grey;">
+             <strong>LinkedIn</strong><span><br />hardikraiyani</a></span>
+          </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/facebook.svg" width="25px"
+            /></span>
+           <a href="https://www.facebook.com/hr.h.hr.581" style="text-decoration: none; font-family: monospace; color: grey; ">
+            <strong>Facebook</strong><span><br />Hardik Raiyani</a></span>
+        </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/instagram.svg" width="25px"
+            /></span>
+            <a href="https://www.instagram.com/imhardikraiyani/?hl=en" style="text-decoration: none; font-family: monospace; color: grey;">
+            <strong>Instagram</strong><span><br />imhardikraiyani</a></span>
+          </p>
+          <p class="p1">
+            <span class="span1"
+              ><img src="images/github.svg" width="25px"
+            /></span>
+            <a href="https://github.com/hardikraiyani98" style="text-decoration: none; font-family: monospace; color: grey;">
+            <strong>GitHub</strong><span><br />hardikraiyani98</a></span>
+          </p>
+        </div>
+      </div>
 
-    <div id="fixedlink" target="_blank" rel="nofollow noopener">
-	<a href="https://www.facebook.com/hr.h.hr.581">
-		<img src="images/facebook.svg" alt="Facebook">
-	</a>
-	<a href="https://www.instagram.com/imhardikraiyani/?hl=en">
-		<img src="images/instagram.svg" alt="Instagram">
-	</a>
-	<a href="https://twitter.com/hardikraiyanii">
-		<img src="images/twitter.svg" alt="Twitter">
-	</a>
-	<a href="https://www.linkedin.com/in/hardik-raiyani-5992a8362">
-		<img src="images/linkedin.svg" alt="LinkedIn">
-	</a>
-</div>
+      <div class="right-section">
+        <div class="right=heading">
+          <img src="images/profile.svg" style="background-color: #f4f7ff; padding-top: 1px;" />
+          <p class="p2">Profile</p>
+        </div>
+        <p class="" style="font-style: oblique;
+                         margin-top: 20px; text-align: justify;
+                         font-weight: 500; font-size: 14px;">
+          I'm a software engineer with 6 years of experience and a passion for
+          building web applications that are
+           both functional and aesthetically pleasing.
+        </p>
 
+        <div class="clearfix"></div>
+        <br /><br />
+        <div class="right-heading">
+          <img src="images/education-cap-svgrepo-com.svg" style="background-color: #f4f7ff; padding-top: 1px;" />
+          <p class="p2">Education</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="lr-box">
+          <div class="left">
+            <p class="p4">2011-2014 </p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">Diploma In Compuuter Engineering</p>
+            <p class="p5">Darshan Institute of Enggineering & Technology</p>
+            <p class="p5">Gujrat Technical University</p>
+            <div class="clearfix"></div>
+        </div>
+          
+          <div class="lr-box">
+          <div class="left">
+            <p class="p4">2014-2017</p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">B.Tech In Compuuter Engineering </p>
+            <p class="p5">Darshan Institute of Enggineering & Technology/p>
+            <p class="p5">Gujrat Technical University</p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <br><br>
+        <div class="right-heading">
+          <img src="images/work-case-filled-svgrepo-com.svg" style="background-color: #f4f7ff; padding-top: 1px;" />
+          <p class="p2">Work Experience</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="lr-box">
+          <div class="left">
+            <p class="p4">2017-2023</p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">Web Developer</p>
+            <p class="p5">[Infinity Infoway]</p>
+            <p class="p5"><strong>Web Development:</strong> Designing, coding, and testing</p>
+            <div class="clearfix"></div>
+        </div>
+          </div><br><br>
+          <div class="lr-box">
+          <div class="left">
+            <p class="p4">2023-Present</p>
+            <p class="p5">Rajkot</p>
+          </div>
+          <div class="right">
+            <p class="p4">MERN,NEXT.JS & DevOps</p>
+            <p class="p5">[Ullas India]</p>
+            <p class="p5"><strong>Web App Development:</strong> Designing, coding, and testing Web App applications.</p>
+            <p class="p5"><strong>Problem Solving:</strong> Identifying and resolving App defects and issues.</p>
+            <p class="p5"><strong>Collaboration:</strong> Working with cross-functional teams to define requirements and solutions.</p>
+            <div class="clearfix"></div>
+          </div>
 
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- typed js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <!-- custom js -->
-    <script src="index.js"></script>
-</body>
-
+          
+        </div>
+        <div class="clearfix"></div>
+        <br /><br />
+        <div class="right=heading">
+          <img src="images/work-case-filled-svgrepo-com.svg" style="background-color: #f4f7ff; padding-top: 1px;" />
+          <p class="p2">Skills</p>
+          </div>
+          <div class="clearfix"></div>
+          <br><br>
+          <div class="s_main" style="display: grid; grid-template-columns: repeat(4, 1fr);">
+             <div class="s_sub">
+                <span class="flex"><img src="images/html5-01-svgrepo-com.svg" class="h1-img" style="margin-top: 2px; background-color: white; margin-right: 2px;">HTML</span>
+                <span class="flex"><img src="images/css3-01-svgrepo-com.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">CSS3</span>
+                 <span class="flex"><img src="images/tailwind.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">Tailwind</span>
+                <span class="flex"><img src="images/js.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">JavaScript</span>
+              </div>
+              <div class="s_sub">
+                <span class="flex"><img src="images/react.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">React</span>
+                <span class="flex"><img src="images/nodejs.svg" class="h1-img" style="background-color: white; margin-right: 2px; margin-top: 2px;">Node.js</span>
+                <span class="flex"><img src="images/nextjs.svg" class="h1-img" style="background-color: white; margin-right: 2px; margin-top: 2px;">Next.js</span>
+                <span class="flex"><img src="images/express.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">Express</span>
+              </div>
+              <div class="s_sub">
+                <span class="flex"><img src="images/vite.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">Vite</span>
+                <span class="flex"><img src="images/python.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">Python</span>
+                <span class="flex"><img src="images/mongodb.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">MongoDB</span>
+                <span class="flex"><img src="images/postgresql.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">PostgreSql</span>
+              </div>
+              <div class="s_sub">
+                
+                <span class="flex"><img src="images/git.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">Git</span>
+                <span class="flex"><img src="images/aws.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">AWS</span>
+                <span class="flex"><img src="images/docker.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">Docker</span>
+                <span class="flex"><img src="images/devops.svg" class="h1-img" style="background-color: white; margin-right: 2px;margin-top: 2px;">DevOPS</span>
+              </div>
+          </div>
+        <div class="clearfix"></div>
+        <br /><br />
+        <div class="right=heading">
+          <img src="images/sport-ball-svgrepo-com.svg" style="background-color: #f4f7ff; padding-top: 1px;"  />
+          <p class="p2">Hobby</p>
+          </div>
+          <div class="clearfix"></div>
+          <br><br>
+          <img src="images/bicycle-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/game-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/book-closed-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/headphone-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/chess-computer-strategy-svgrepo-com.svg" class="h-img" style="background-color: white;">
+          <img src="images/badminton-racket-and-feather-svgrepo-com.svg" class="h-img" style="background-color: white;">
+    </div>
+     <div class="clearfix"></div>
+        <br><br>
+        <div class="right=heading">
+          <img src="images/profile.svg" style="background-color: #f4f7ff; padding-top: 1px;" />
+          <p class="p2">Languages</p>
+        </div>
+        <div class="clearfix"></div>
+        <ul style="list-style: none;">
+          <li class="p6" style="padding-left: 30px;">English</li>
+          <li class="p6" style="padding-left: 30px;">Hindi</li>
+          <li class="p6" style="padding-left: 30px;">Gujarati</li>
+        </ul>
+        </div>
+  </div>     
+  <script>
+        function generatePDF() {
+        const element = document.getElementById('printableArea'); // Target your specific element by ID
+        html2pdf().from(element).save("HR_CV.pdf");
+    }
+    </script>
+  </body>
 </html>
