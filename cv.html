@@ -324,6 +324,16 @@
         height: 1000px;
       }
       }
+
+       @media print {
+      body * {
+        visibility: hidden;
+      }
+      #printableArea, #printableArea * {
+        visibility: visible;
+      }
+     }
+      
     </style>
   </head>
   <body>
@@ -331,9 +341,13 @@
     <header class="header">
 
         <a href="https://hardikraiyani.com/" class="logo" style="text-align: center;">HOME</a>
+        <button onclick="window.print()" style="border: none; background: transparent; color: white;
+         font-size: 16px; cursor: pointer; border: 2px solid white; border-radius: 30px; padding: 7px 10px;">
+        Save PDF</button>
         
     </header>
-    <div class="resume-box">
+    
+    <div class="resume-box" id="printableArea">
       <div class="left-section">
         <div class="profile">
           <img
@@ -555,8 +569,9 @@
           <li class="p6" style="padding-left: 30px;">Hindi</li>
           <li class="p6" style="padding-left: 30px;">Gujarati</li>
         </ul>
+        </div>
+  </div>     
        
     
   </body>
 </html>
-
