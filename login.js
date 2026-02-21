@@ -18,7 +18,7 @@ document.getElementById("signInForm").addEventListener("submit", function (e) {
         const errorMsg = document.getElementById("error-msg");
 
         // Dummy credentials
-        const validEmail = "document";
+        const validEmail = "hardikraiyani410@gmail.com";
         const validPassword = "8866570426";
 
         if (email === validEmail && password === validPassword) {
@@ -29,4 +29,5 @@ document.getElementById("signInForm").addEventListener("submit", function (e) {
             alert("Invalid email or password");
         }
         });
+
 
