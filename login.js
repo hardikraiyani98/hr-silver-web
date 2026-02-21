@@ -18,14 +18,15 @@ document.getElementById("signInForm").addEventListener("submit", function (e) {
         const errorMsg = document.getElementById("error-msg");
 
         // Dummy credentials
-        const validEmail = "hrsilverrajkot@gmail.com";
+        const validEmail = "document";
         const validPassword = "8866570426";
 
         if (email === validEmail && password === validPassword) {
             // Redirect to the next page
-            window.location.href = "hrbill.html";
+            window.location.href = "certificate.html";
         } else {
             errorMsg.textContent = "Invalid email or password";
             alert("Invalid email or password");
         }
         });
+
