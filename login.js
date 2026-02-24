@@ -22,12 +22,13 @@ document.getElementById("signInForm").addEventListener("submit", function (e) {
         const validPassword = "8866570426";
 
         if (email === validEmail && password === validPassword) {
-            // Redirect to the next page
-            window.location.href = "certificate.html";
+            // Redirect to the next path
+            window.location.href = "document.html";
         } else {
             errorMsg.textContent = "Invalid email or password";
             alert("Invalid email or password");
         }
         });
+
 
 
