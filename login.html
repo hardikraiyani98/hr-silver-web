@@ -292,7 +292,25 @@ footer p {
 
 
 
-<script src="js/login.js"></script>
+<script>
+
+	function login() {
+  const username = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  // Hardcoded credentials
+  const correctUsername = "Admin";
+  const correctPassword = "99796";
+
+  if (email === correctUsername && password === correctPassword) {
+    // Redirect to another page
+    window.location.href = "hrbill.html";
+  } else {
+    document.getElementById("error").innerText = "Invalid username or password";
+  }
+}
+	
+</script>
 </body>
 </html>
 
